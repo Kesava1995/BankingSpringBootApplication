@@ -45,5 +45,8 @@ node{
 		}
 	}
 }
+stage('Maven Build'){
+        sh "mvn clean package"        
+}
 
 
