@@ -44,9 +44,7 @@ node{
 			sh "export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook -i inventory.yaml containerDeploy.yaml -e httpPort=$httpPort -e containerName=$containerName -e dockerImageTag=$dockerHubUser/$containerName:$tag -e ansible_password=$password -e key_pair_path=/var/lib/jenkins/server.pem --become" 
 		}
 	}
+    	stage('Maven Build'){
+        	sh "mvn clean package"        
+    	}
 }
-stage('Maven Build'){
-        sh "mvn clean package"        
-}
-
-
