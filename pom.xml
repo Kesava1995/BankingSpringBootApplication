@@ -45,6 +45,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+			<version>1.18.32</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
@@ -82,25 +83,6 @@
             <configuration>
                 <source>11</source>
                 <target>11</target>
-                <compilerArgs>
-                    <arg>--add-opens</arg>
-                    <arg>java.base/java.lang=ALL-UNNAMED</arg>
-                    <arg>--add-opens</arg>
-                    <arg>java.base/java.util=ALL-UNNAMED</arg>
-
-                    <arg>--add-opens</arg>
-                    <arg>jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
-                    <arg>--add-opens</arg>
-                    <arg>jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
-                    <arg>--add-opens</arg>
-                    <arg>jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
-                    <arg>--add-opens</arg>
-                    <arg>jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
-                    <arg>--add-opens</arg>
-                    <arg>jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
-                    <arg>--add-opens</arg>
-                    <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-                </compilerArgs>
             </configuration>
         </plugin>
 		</plugins>
