@@ -7,7 +7,11 @@
 
   - name: Install Docker
     apt: name=docker.io state=latest
-
+    
+  - name: Stop existing container if running
+    command: "docker stop {{ containerName }}"
+    ignore_errors: true
+    
   - name: Remove Existing Container
     command: "docker rm {{ containerName }}"
     ignore_errors: true
