@@ -39,7 +39,7 @@ node{
     
     stage('Docker Image Build'){
         echo 'Creating Docker image'
-        sh "docker build -t $dockerHubUser/$containerName:$tag --pull --no-cache ."
+        sh "docker buildx build --platform linux/amd64 -t $dockerHubUser/$containerName:$tag --load ."
     }  
 	
     stage('Publishing Image to DockerHub'){
